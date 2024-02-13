@@ -25,3 +25,12 @@ jobs:
       run: chmod +x gradlew
     - name: Test with Gradle
       run: ./gradlew test
+
+  next:
+    name: next
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+    - name: echo
+      run: echo "echo!"
